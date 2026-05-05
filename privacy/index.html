@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — MyQuid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    body {
+      align-items: flex-start;
+      padding: 3rem 2rem 5rem;
+    }
+
+    main {
+      max-width: 640px;
+    }
+
+    .privacy-header {
+      margin-bottom: 0.5rem;
+    }
+
+    .privacy-header h1 {
+      font-size: clamp(1.75rem, 5vw, 2.25rem);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    .last-updated {
+      font-size: 0.8125rem;
+      color: var(--muted);
+    }
+
+    .policy-body {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .policy-section h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    .policy-section p,
+    .policy-section li {
+      font-size: 0.9375rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .policy-section ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .policy-section ul li {
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .policy-section ul li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: var(--border);
+    }
+
+    .policy-section ul li strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .policy-section a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .policy-section a:hover {
+      text-decoration: underline;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 2rem 1.5rem 4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="privacy-header">
+      <a href="/" style="font-size:0.8125rem;color:var(--muted);text-decoration:none;display:inline-block;margin-bottom:2rem;">&larr; joehall.dev</a>
+      <h1>Privacy Policy</h1>
+      <p class="last-updated">Last updated: May 2026</p>
+    </header>
+
+    <hr class="divider" style="margin:1.75rem 0;" />
+
+    <div class="policy-body">
+
+      <div class="policy-section">
+        <h2>1. Introduction</h2>
+        <p>MyQuid is operated by <strong>Joe Hall Ltd</strong> ("we", "us", or "our"), a company registered in Scotland. We are committed to protecting your personal data and being transparent about how we use it to provide you with financial insights.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>2. The Data We Collect</h2>
+        <p>To provide the MyQuid service, we collect:</p>
+        <ul>
+          <li><strong>Identity Data:</strong> Name and email address (via AWS Cognito).</li>
+          <li><strong>Financial Data:</strong> Transaction history and account balances (via our Open Banking provider, Finexer).</li>
+          <li><strong>Technical Data:</strong> IP address and browser type (via Amazon CloudFront and AWS VPC logs).</li>
+        </ul>
+      </div>
+
+      <div class="policy-section">
+        <h2>3. How We Use Your Data</h2>
+        <p>We process your data only when we have a legal basis to do so:</p>
+        <ul>
+          <li><strong>Contractual Necessity:</strong> To pull your bank data and show it in the app.</li>
+          <li><strong>Legitimate Interests:</strong> To improve the MyQuid interface and ensure our AWS infrastructure remains secure.</li>
+          <li><strong>Consent:</strong> For sending you optional financial insights or newsletters.</li>
+        </ul>
+      </div>
+
+      <div class="policy-section">
+        <h2>4. Data Storage and Security</h2>
+        <p>Your data is stored in encrypted Amazon RDS databases located in the London (eu-west-2) AWS Region. We use industry-standard security, including:</p>
+        <ul>
+          <li><strong>Secrets Management:</strong> Your credentials are never hardcoded.</li>
+          <li><strong>Edge Protection:</strong> Traffic is routed through Amazon CloudFront with SSL/TLS encryption.</li>
+          <li><strong>Data Isolation:</strong> All financial processing occurs within an isolated Virtual Private Cloud (VPC).</li>
+        </ul>
+      </div>
+
+      <div class="policy-section">
+        <h2>5. Sharing Your Data</h2>
+        <p>We do not sell your data. We only share it with essential service providers:</p>
+        <ul>
+          <li><strong>Finexer:</strong> To securely connect to your bank.</li>
+          <li><strong>AWS:</strong> For hosting and infrastructure services.</li>
+        </ul>
+      </div>
+
+      <div class="policy-section">
+        <h2>6. Data Retention</h2>
+        <p>We retain your personal and financial data only for as long as your account is active. Upon account deletion, all associated data is permanently erased immediately.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>7. Your Rights</h2>
+        <p>Under UK GDPR, you have the right to access, correct, or erase your data. You can also withdraw your Open Banking consent at any time directly through the app settings. To exercise any of your rights, contact us at the address below.</p>
+        <p style="margin-top:0.75rem;">You also have the right to lodge a complaint with the <strong>Information Commissioner's Office (ICO)</strong> at <a href="https://ico.org.uk/make-a-complaint" target="_blank" rel="noopener">ico.org.uk/make-a-complaint</a> or by calling 0303 123 1113.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>8. Contact Us</h2>
+        <p>For any data-related queries, contact Joe Hall at:</p>
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:joe@joehall.dev">joe@joehall.dev</a></li>
+          <li><strong>Address:</strong> Joe Hall Ltd, 3 Hill Street, Third Floor, Edinburgh, EH2 3JZ</li>
+          <li><strong>ICO Registration:</strong> ZC137085</li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>
